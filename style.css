@@ -1,0 +1,140 @@
+@font-face {
+  font-family: " Walsheim ";
+  src: url("//fonts/ Walsheim Pro Regular Regular.eot");
+  src: url("//fonts/ Walsheim Pro Regular Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("//fonts/ Walsheim Pro Regular Regular.woff2") format("woff2"),
+    url("//fonts/ Walsheim Pro Regular Regular.woff") format("woff"),
+    url("//fonts/ Walsheim Pro Regular Regular.ttf") format("truetype"),
+    url("//fonts/ Walsheim Pro Regular Regular.svg#GT Walsheim Pro Regular Regular")
+      format("svg");
+}
+* {
+  box-sizing: border-box;
+  font-family: "Walsheim", sans-serif;
+}
+body {
+  background: #1b1d1e;
+}
+.wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+.main.wrap {
+  margin-top: 60px;
+  position: relative;
+}
+.items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.text {
+  color: #fff;
+  font-family: "Walsheim", sans-serif;
+  text-align: center;
+}
+.text h1 {
+  font-weight: normal;
+  font-size: 75px;
+}
+.text p {
+  font-size: 18px;
+  line-height: 28px;
+  width: 690px;
+  margin: 0 auto;
+}
+.main .item {
+  width: 485px;
+  height: 485px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  color: #fff;
+  position: relative;
+}
+.main .item img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  transition: 2s;
+}
+.main .item:hover img {
+  transform: scale(1.2);
+}
+.circle {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: #1b1d1e;
+  z-index: 1;
+  border-radius: 50%;
+  left: 325px;
+  top: 325px;
+  padding: 10px;
+}
+.circle img {
+  width: 330px;
+  height: 330px;
+  animation-name: twist;
+  animation-duration: 35s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+@keyframes twist {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.circle .text2 {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  z-index: 5;
+  color: #817459;
+  font-size: 18px;
+  line-height: 30px;
+  left: -5px;
+  top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Walsheim", sans-serif;
+}
+.circle .text2 p {
+  margin: 0;
+}
+.item h2 {
+  position: absolute;
+  bottom: 25%;
+  z-index: 1;
+  font-size: 50px;
+  line-height: 50px;
+}
+.item p {
+  width: 350px;
+  position: absolute;
+  bottom: 15%;
+  z-index: 1;
+  font-size: 18px;
+  line-height: 23px;
+}
+.item:nth-child(odd) p,
+.item:nth-child(odd) h2 {
+  left: 40px;
+}
+.item:nth-child(even) p,
+.item:nth-child(even) h2 {
+  right: 40px;
+  text-align: right;
+}
+.item:first-child {
+  color: #1b1d1e;
+}
+.item:last-child {
+  color: #1b1d1e;
+}
